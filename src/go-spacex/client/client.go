@@ -25,7 +25,7 @@ func (r *SpaceXClient) Get(url *url.URL) []byte {
   defer rsp.Body.Close()
 
   if rsp.StatusCode != http.StatusOK {
-    log.Println("%d, %s", rsp.StatusCode, rsp.Status)
+    log.Printf("%d: %s\n", rsp.StatusCode, rsp.Status)
     return nil
   }
 
