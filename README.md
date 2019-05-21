@@ -3,7 +3,7 @@ SpaceX Client for Go
 
 
 ```
-go get github.com/zex/go-spacex
+go get github.com/zex/go-spacex/client
 ```
 
 ```
