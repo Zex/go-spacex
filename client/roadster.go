@@ -5,11 +5,11 @@ import (
   "fmt"
 )
 
-func (r *SpaceXClient) GetRoadster(id string) []byte {
+func (r *SpaceXClient) GetRoadster() []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
-    Path: fmt.Sprintf(ApiGetRoadster, id),
+    Path: fmt.Sprintf(ApiGetRoadster),
   }
 
   return r.Get(&url)

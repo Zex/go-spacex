@@ -5,21 +5,22 @@ import (
   "fmt"
 )
 
-func (r *SpaceXClient) AboutUs() []byte {
+func (r *SpaceXClient) ListHistory(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
-    Path: fmt.Sprintf(ApiAboutUs),
+    Path: fmt.Sprintf(ApiListHistory),
+    RawQuery: q.Encode(),
   }
 
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) AboutApi() []byte {
+func (r *SpaceXClient) GetHistory(id string) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
-    Path: fmt.Sprintf(ApiAboutApi),
+    Path: fmt.Sprintf(ApiGetHistory, id),
   }
 
   return r.Get(&url)
