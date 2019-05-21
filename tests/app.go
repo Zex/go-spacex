@@ -1,7 +1,7 @@
 package main
 
 import (
-  "go-spacex/client"
+  "github.com/zex/go-spacex/client"
   "fmt"
 )
 
