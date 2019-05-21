@@ -26,7 +26,7 @@ func (r *SpaceXClient) GetCore(id string) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) PastCores(q *url.Values) []byte {
+func (r *SpaceXClient) PastCores(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
@@ -37,7 +37,7 @@ func (r *SpaceXClient) PastCores(q *url.Values) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) UpcomingCores(q *url.Values) []byte {
+func (r *SpaceXClient) UpcomingCores(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,

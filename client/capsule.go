@@ -26,7 +26,7 @@ func (r *SpaceXClient) GetCapsule(id string) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) PastCapsules(q *url.Values) []byte {
+func (r *SpaceXClient) PastCapsules(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
@@ -37,7 +37,7 @@ func (r *SpaceXClient) PastCapsules(q *url.Values) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) UpcomingCapsules(q *url.Values) []byte {
+func (r *SpaceXClient) UpcomingCapsules(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,

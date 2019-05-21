@@ -26,7 +26,7 @@ func (r *SpaceXClient) GetLaunch(id string) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) PastLaunches(q *url.Values) []byte {
+func (r *SpaceXClient) PastLaunches(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,
@@ -37,7 +37,7 @@ func (r *SpaceXClient) PastLaunches(q *url.Values) []byte {
   return r.Get(&url)
 }
 
-func (r *SpaceXClient) UpcomingLaunches(q *url.Values) []byte {
+func (r *SpaceXClient) UpcomingLaunches(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
     Host: ApiHost,

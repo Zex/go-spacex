@@ -8,6 +8,7 @@ import (
 func main() {
   cli := client.NewSpaceXClient()
 
+  /**
   fmt.Println(cli.ListRockets(nil))
   fmt.Println(cli.ListShips(nil))
   fmt.Printf("%s\n", string(cli.ListPayloads(nil)))
@@ -23,4 +24,8 @@ func main() {
   fmt.Printf("%s\n", string(cli.AboutUs()))
   fmt.Printf("%s\n", string(cli.AboutApi()))
   fmt.Printf("%s\n", string(cli.GetRoadster()))
+  fmt.Printf("%s\n", string(cli.UpcomingLaunches(nil)))
+  fmt.Printf("%s\n", string(cli.NextLaunch()))
+  */
+  fmt.Printf("%s\n", string(cli.PastLaunches(nil)))
 }
