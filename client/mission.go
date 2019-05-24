@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const(
+  ApiListMissions = "/v3/missions"
+  ApiGetMission = "/v3/mission/%s"
+)
+
 func (r *SpaceXClient) ListMissions(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const(
+  ApiListRockets = "/v3/rockets"
+  ApiGetRocket = "/v3/rockets/%s"
+)
+
 func (r *SpaceXClient) ListRockets(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

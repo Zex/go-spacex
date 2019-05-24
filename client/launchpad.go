@@ -5,6 +5,16 @@ import (
   "fmt"
 )
 
+const(
+  ApiListLandPads = "/v3/landpads"
+  ApiGetLandPad = "/v3/landpads/%s"
+)
+
+const(
+  ApiListLaunchPads = "/v3/launchpads"
+  ApiGetLaunchPad = "/v3/launchpads/%s"
+)
+
 func (r *SpaceXClient) ListLaunchPads(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

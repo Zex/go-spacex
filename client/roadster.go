@@ -5,6 +5,10 @@ import (
   "fmt"
 )
 
+const(
+  ApiGetRoadster = "/v3/roadster"
+)
+
 func (r *SpaceXClient) GetRoadster() []byte {
   url := url.URL{
     Scheme: ApiScheme,

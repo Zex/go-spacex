@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const(
+  ApiListPayloads = "/v3/payloads"
+  ApiGetPayload = "/v3/payload/%s"
+)
+
 func (r *SpaceXClient) ListPayloads(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

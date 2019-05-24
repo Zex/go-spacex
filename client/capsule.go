@@ -5,6 +5,13 @@ import (
   "fmt"
 )
 
+const(
+  ApiListCapsules = "/v3/capsules"
+  ApiGetCapsule = "/v3/capsules/%s"
+  ApiUpcomingCapsules = "/v3/capsules/upcoming"
+  ApiPastCapsules = "/v3/capsules/past"
+)
+
 func (r *SpaceXClient) ListCapsules(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

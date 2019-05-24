@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const(
+  ApiAboutUs = "/v3/info"
+  ApiAboutApi = "/v3"
+)
+
 func (r *SpaceXClient) AboutUs() []byte {
   url := url.URL{
     Scheme: ApiScheme,

@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const(
+  ApiListDragons = "/v3/dragons"
+  ApiGetDragon = "/v3/dragon/%s"
+)
+
 func (r *SpaceXClient) ListDragons(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

@@ -5,6 +5,13 @@ import (
   "fmt"
 )
 
+const(
+  ApiListCores = "/v3/cores"
+  ApiGetCore = "/v3/cores/%s"
+  ApiUpcomingCores = "/v3/cores/upcoming"
+  ApiPastCores = "/v3/cores/past"
+)
+
 func (r *SpaceXClient) ListCores(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

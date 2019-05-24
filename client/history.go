@@ -5,6 +5,11 @@ import (
   "fmt"
 )
 
+const (
+  ApiListHistory = "/v3/history"
+  ApiGetHistory = "/v3/history/%s"
+)
+
 func (r *SpaceXClient) ListHistory(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,

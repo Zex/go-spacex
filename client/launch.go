@@ -5,6 +5,15 @@ import (
   "fmt"
 )
 
+const(
+  ApiListLaunches = "/v3/launches"
+  ApiGetLaunch = "/v3/launches/%s"
+  ApiPastLaunches = "/v3/launches/past"
+  ApiUpcomingLaunches = "/v3/launches/upcoming"
+  ApiLatestLaunch = "/v3/launches/latest"
+  ApiNextLaunch = "/v3/launches/next"
+)
+
 func (r *SpaceXClient) ListLaunches(q url.Values) []byte {
   url := url.URL{
     Scheme: ApiScheme,
